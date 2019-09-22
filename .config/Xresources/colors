@@ -1,0 +1,40 @@
+! vim: ft=xdefaults
+
+URxvt.depth: 32
+
+URxvt.background: [70]#000
+URxvt.foreground:  #999993
+
+URxvt.cursorColor: #9e9ecb
+
+! Black
+URxvt.color0:  #333333
+URxvt.color8:  #3d3d3d
+
+! Red
+URxvt.color1:  #8c4665
+URxvt.color9:  #bf4d80
+
+! Green
+URxvt.color2:  #287373
+URxvt.color10: #53a6a6
+
+! Yellow
+URxvt.color3:  #7c7c99
+URxvt.color11: #9e9ecb
+
+! Blue
+URxvt.color4:  #395573
+URxvt.color12: #477ab3
+
+! Magenta
+URxvt.color5:  #5e468c
+URxvt.color13: #7e62b3
+
+! Cyan
+URxvt.color6:  #31658c
+URxvt.color14: #6096bf
+
+! White
+URxvt.color7:  #899ca1
+URxvt.color15: #c0c0c0

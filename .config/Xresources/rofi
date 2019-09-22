@@ -1,0 +1,18 @@
+! vim: ft=xdefaults
+
+rofi.bw: 0
+rofi.combi-hide-mode-prefix: true
+rofi.combi-modi: drun,window
+rofi.fake-transparency: false
+rofi.font: Oswald 10
+rofi.fullscreen: true
+rofi.hide-scrollbar: true
+rofi.lines: 8
+rofi.modi: combi
+rofi.padding: 250
+rofi.separator-style: solid
+
+rofi.color-normal: argb:00000000, #c4cbd4, argb:00000000, #4084d6, #f9f9f9
+rofi.color-urgent: argb:00000000, #cc6666, argb:00000000, #a54242, #f9f9f9
+rofi.color-active: argb:00000000, #65acff, argb:00000000, #4491ed, #f9f9f9
+rofi.color-window: argb:BF1a181c, #7c8389, #1d1f21

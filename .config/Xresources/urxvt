@@ -1,0 +1,26 @@
+! vim: ft=xdefaults
+
+URxvt.geometry: 88x18
+URxvt.saveLines: 10000
+URxvt.scrollBar: off
+URxvt.xftAntialias: true
+URxvt.xftHinting: true
+
+URxvt.font: xft:Iosevka:medium:size=11, xft:IPAGothic:size=11
+URxvt.boldFont: xft:Iosevka:bold:size=11, xft:IPAGothic:size=11:bold
+URxvt.italicFont: xft:Iosevka:medium:size=11:italic, xft:IPAGothic:size=11:italic
+URxvt.boldItalicFont: xft:Iosevka:medium:size=11:bold:italic, xft:IPAGothic:size=11:bold:italic
+
+! Clipboard Support
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+
+! Perl Extensions
+URxvt.perl-ext: default,url-select
+
+! Vim-like URL Navigation
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/firefox
+URxvt.url-select.underline: true

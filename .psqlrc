@@ -1,0 +1,3 @@
+\set PROMPT2 '[more] %R > '
+\timing
+\x auto

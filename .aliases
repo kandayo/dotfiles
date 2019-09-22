@@ -1,0 +1,22 @@
+alias pw='xkcdpass -n 5 -d . -C capitalize -v [a-z] -V'
+
+alias sudo='sudo '
+alias ag='ag --ignore-case --hidden'
+alias df='df -h'
+alias du='du -sh'
+alias free='free -h'
+alias grep='grep --color=auto'
+alias ls='ls --color=auto --group-directories-first -h --literal'
+alias la='ls -la'
+alias mkdir='mkdir -pv'
+alias tree='tree --dirsfirst -L 2'
+
+alias ..='cd ..'
+alias l='ls -la'
+alias r='ranger'
+alias v='vim'
+
+alias rc='rails console'
+alias rs='rails server'
+alias rd='rails dbconsole'
+alias rn='rails new'

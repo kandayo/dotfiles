@@ -1,0 +1,3 @@
+#include ".config/Xresources/urxvt"
+#include ".config/Xresources/rofi"
+#include ".config/Xresources/colors"
