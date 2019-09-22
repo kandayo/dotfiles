@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-  feh ~/.config/wallpaper.jpg --bg-fill --no-fehbg
+  feh "${WALLPAPER_PATH}" --bg-fill --no-fehbg
 }
 
 main "$@"

@@ -6,14 +6,13 @@ export HISTFILESIZE=-1
 export HISTSIZE=-1
 export PROMPT_COMMAND='history -a'
 
-export PATH="${HOME}/.rbenv/bin:${PATH}"
-
-export PATH="${PATH}:/opt/openresty/bin"
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 export PASSWORD_STORE_CLIP_TIME=60
 export PASSWORD_STORE_DIR=~/.pw
 export PASSWORD_STORE_GENERATED_LENGTH=72
+
+export WALLPAPER_PATH=~/.config/wallpaper.jpg
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
@@ -29,23 +28,26 @@ shopt -s autocd cdspell direxpand dirspell xpg_echo histappend cmdhist
 
 source ~/.aliases
 source ~/.functions
-source ~/.prompt
 
-# git aware prompt
-export GIT_PROMPT_ONLY_IN_REPO=1
-export GIT_PROMPT_THEME="Single_line_Dark"
-source "${HOME}/.bash-git-prompt/gitprompt.sh"
+# sexy bash prompt
+export PROMPT_USER_COLOR="$(tput bold)$(tput setaf 104)"
+export PROMPT_DEVICE_COLOR="$(tput bold)$(tput setaf 104)"
+export PROMPT_DIR_COLOR="$(tput bold)$(tput setaf 104)"
+export PROMPT_GIT_STATUS_COLOR="$(tput bold)$(tput setaf 104)"
+export PROMPT_SYMBOL=»
+source ~/.bash_prompt
 
 # nvm
-export NVM_DIR="${HOME}/.nvm"
-source "${NVM_DIR}/nvm.sh"
-source "${NVM_DIR}/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+source "$NVM_DIR/nvm.sh"
+source "$NVM_DIR/bash_completion"
 
 # dircolors
 eval "$(dircolors ~/.dir_colors)"
 # luarocks
 eval "$(luarocks path --bin)"
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # direnv
 eval "$(direnv hook bash)"
