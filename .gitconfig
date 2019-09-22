@@ -1,7 +1,7 @@
 [user]
-	name = kandayo
-	email = hello@kandayo.tech
-	signingkey = E8B35D4A17C37621
+  name = kandayo
+  email = hello@kandayo.tech
+  signingkey = E8B35D4A17C37621
 
 [commit]
   gpgsign = true
