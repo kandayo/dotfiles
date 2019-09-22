@@ -49,3 +49,6 @@
 [submodule ".vim/plugged/ale"]
 	path = .vim/plugged/ale
 	url = https://github.com/w0rp/ale.git
+[submodule ".nord-dircolors"]
+	path = .nord-dircolors
+	url = https://github.com/arcticicestudio/nord-dircolors.git
