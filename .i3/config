@@ -1,0 +1,155 @@
+# vim: filetype=i3config
+
+set $mod Mod4
+
+floating_modifier $mod
+
+for_window [class=".*"] border pixel 2
+floating_maximum_size 1280 x 720
+
+focus_follows_mouse no
+
+# autostart
+exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id ~/.config/wallpaper
+exec --no-startup-id parcellite
+exec --no-startup-id flameshot
+
+# colors
+client.focused    #828282 #828282 #828282 #828282 #828282
+client.unfocused  #333333 #333333 #333333 #333333 #333333
+
+# use pactl to adjust volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# backlight
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+
+# urxvt client
+bindsym $mod+Return exec --no-startup-id urxvtc
+
+# rofi
+bindsym $mod+d exec --no-startup-id rofi -show combi
+
+# close window
+bindsym $mod+q kill
+bindsym --release $mod+Shift+q exec --no-startup-id xkill
+
+# screenshot
+bindsym Print exec --no-startup-id flameshot gui
+
+# change focus
+bindsym $mod+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle floating mode
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+## workspaces
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+## resize
+
+mode "resize" {
+  bindsym l resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym j resize shrink height 10 px or 10 ppt
+  bindsym h resize grow width 10 px or 10 ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# scratchpad
+bindsym F10 move scratchpad
+bindsym $mod+F10 scratchpad show
+
+## bumblebee
+
+bar {
+  position bottom
+  height 20
+
+  colors {
+    background #161821
+  }
+
+  font pango:Iosevka Medium 10
+
+  tray_output none
+
+	status_command ~/.i3/bumblebee-status/bumblebee-status \
+    -t iceberg \
+    -m battery amixer brightness weather nic memory cpu sensors date time \
+    -p memory.format="{used} ({percent:01.00f}%)" \
+       nic.format="{state} {ip} {ssid}" \
+       nic.exclude="virbr,docker,vboxnet,lo,enp7s0" \
+       weather.location="Salvador" \
+       date.format="%a, %b %d %Y" \
+       time.format="%H:%M"
+}
+
+
+assign [class="^firefox$"] 1
+assign [class="^slack$"] 2
+assign [class="^discord$"] 3
+
+for_window [class="feh"] floating enable
+for_window [class="flameshot"] floating enable
+for_window [class="mpv"] floating enable
+for_window [window_role="about"] floating enable
