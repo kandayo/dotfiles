@@ -130,7 +130,7 @@ bar {
 
   tray_output none
 
-	status_command ~/.i3/bumblebee-status/bumblebee-status \
+  status_command ~/.i3/bumblebee-status/bumblebee-status \
     -t iceberg \
     -m battery amixer brightness weather nic memory cpu sensors date time \
     -p memory.format="{used}" \
