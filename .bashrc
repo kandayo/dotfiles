@@ -27,6 +27,7 @@ bind 'set completion-map-case on'
 shopt -s autocd cdspell direxpand dirspell xpg_echo histappend cmdhist
 
 source ~/.aliases
+source ~/.private
 source ~/.functions
 
 # sexy bash prompt
@@ -38,14 +39,14 @@ export PROMPT_SYMBOL=»
 source ~/.bash_prompt
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-source "$NVM_DIR/nvm.sh"
-source "$NVM_DIR/bash_completion"
+nodesetup() {
+  export NVM_DIR="$HOME/.nvm"
+  source "$NVM_DIR/nvm.sh"
+  source "$NVM_DIR/bash_completion"
+}
 
 # dircolors
 eval "$(dircolors ~/.dir_colors)"
-# luarocks
-eval "$(luarocks path --bin)"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

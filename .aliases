@@ -1,7 +1,7 @@
-alias pw='xkcdpass -n 5 -d . -C capitalize -v [a-z] -V'
+# vim: ft=sh
 
 alias sudo='sudo '
-alias ag='ag --ignore-case --hidden'
+alias ag='ag --ignore-case --literal --hidden'
 alias df='df -h'
 alias du='du -sh'
 alias free='free -h'
@@ -10,13 +10,17 @@ alias ls='ls --color=auto --group-directories-first -h --literal'
 alias la='ls -la'
 alias mkdir='mkdir -pv'
 alias tree='tree --dirsfirst -L 2'
+alias untar='tar xfv '
 
 alias ..='cd ..'
 alias l='ls -la'
 alias r='ranger'
 alias v='vim'
+alias c='clear'
 
-alias rc='rails console'
-alias rs='rails server'
-alias rd='rails dbconsole'
-alias rn='rails new'
+alias rake='bundle exec rake'
+
+alias rc='bundle exec rails c'
+alias rs='bundle exec rails s -p'
+
+alias gs='git status'
