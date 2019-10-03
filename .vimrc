@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'sheerun/vim-polyglot'
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'thoughtbot/vim-rspec'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
@@ -59,13 +60,15 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>' di'
 nnoremap <Leader>" di"
 
-nnoremap <Leader>m :%!jq '.'<CR>
-
-nnoremap <Leader>s :%s//g<Left><Left>
-nnoremap <Leader>d :%s//d<Left><Left>
+nnoremap <Leader>S :%s//g<Left><Left>
+nnoremap <Leader>D :%s//d<Left><Left>
 
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
+
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 
 ""

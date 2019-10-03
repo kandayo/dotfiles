@@ -52,3 +52,6 @@
 [submodule ".nord-dircolors"]
 	path = .nord-dircolors
 	url = https://github.com/arcticicestudio/nord-dircolors.git
+[submodule ".vim/plugged/vim-rspec"]
+	path = .vim/plugged/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
