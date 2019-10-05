@@ -23,6 +23,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
+  Plug 'aliou/sql-heredoc.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'direnv/direnv.vim'
   Plug 'francoiscabrol/ranger.vim'

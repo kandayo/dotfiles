@@ -55,3 +55,6 @@
 [submodule ".vim/plugged/vim-rspec"]
 	path = .vim/plugged/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
+[submodule ".vim/plugged/sql-heredoc.vim"]
+	path = .vim/plugged/sql-heredoc.vim
+	url = https://github.com/aliou/sql-heredoc.vim.git
