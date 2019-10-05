@@ -122,6 +122,9 @@ bar {
   position bottom
   height 20
 
+  wheel_up_cmd nop
+  wheel_down_cmd nop
+
   colors {
     background #161821
   }
@@ -133,7 +136,8 @@ bar {
   status_command ~/.i3/bumblebee-status/bumblebee-status \
     -t iceberg \
     -m battery amixer brightness weather nic memory cpu sensors date time \
-    -p memory.format="{used}" \
+    -p engine.workspacewheel=false \
+       memory.format="{used}" \
        nic.format="{state} {ip} {ssid}" \
        nic.exclude="virbr,docker,vboxnet,lo,enp7s0,veth,br" \
        date.format="%a, %b %d %Y" \
