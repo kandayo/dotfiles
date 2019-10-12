@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'liuchengxu/space-vim-dark'
   Plug 'mboughaba/i3config.vim'
+  Plug 'rhysd/vim-crystal'
   Plug 'scrooloose/nerdcommenter'
   Plug 'sheerun/vim-polyglot'
   Plug 'terryma/vim-multiple-cursors'

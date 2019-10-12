@@ -58,3 +58,6 @@
 [submodule ".vim/plugged/sql-heredoc.vim"]
 	path = .vim/plugged/sql-heredoc.vim
 	url = https://github.com/aliou/sql-heredoc.vim.git
+[submodule ".vim/plugged/vim-crystal"]
+	path = .vim/plugged/vim-crystal
+	url = https://github.com/rhysd/vim-crystal.git
