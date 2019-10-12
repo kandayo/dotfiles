@@ -120,7 +120,7 @@ bindsym $mod+F10 scratchpad show
 
 bar {
   position bottom
-  height 20
+  height 19
 
   wheel_up_cmd nop
   wheel_down_cmd nop
