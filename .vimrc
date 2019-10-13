@@ -136,3 +136,6 @@ let g:ale_fixers = {
 
 " syntax
 let g:vue_pre_processors = []
+
+" rspec
+let g:rspec_command = "!bundle exec rspec {spec}"
