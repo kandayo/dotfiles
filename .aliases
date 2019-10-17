@@ -18,9 +18,9 @@ alias r='ranger'
 alias v='vim'
 alias c='clear'
 
+alias rails='bundle exec rails'
 alias rake='bundle exec rake'
-
-alias rc='bundle exec rails c'
-alias rs='bundle exec rails s -p'
+alias rspec='bundle exec rspec'
+alias sidekiq='bundle exec sidekiq'
 
 alias gs='git status'
