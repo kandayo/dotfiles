@@ -14,6 +14,7 @@ exec --no-startup-id compton --config ~/.config/compton.conf
 exec --no-startup-id ~/.config/wallpaper
 exec --no-startup-id parcellite
 exec --no-startup-id flameshot
+exec --no-startup-id dunst
 
 # colors
 client.focused    #828282 #828282 #828282 #828282 #828282
