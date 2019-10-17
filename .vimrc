@@ -68,7 +68,7 @@ nnoremap <Leader>D :%s//d<Left><Left>
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 
-map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
