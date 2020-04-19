@@ -5,16 +5,18 @@ set $mod Mod4
 floating_modifier $mod
 
 for_window [class=".*"] border pixel 2
-floating_maximum_size 1280 x 720
+floating_maximum_size 1920 x 1080
 
 focus_follows_mouse no
 
 # autostart
-exec --no-startup-id compton --config ~/.config/compton.conf
-exec --no-startup-id ~/.config/wallpaper
+exec --no-startup-id autorandr work
+exec --no-startup-id picom --config ~/.config/picom.conf
 exec --no-startup-id parcellite
 exec --no-startup-id flameshot
 exec --no-startup-id dunst
+exec --no-startup-id ~/.config/wallpaper
+exec --no-startup-id sleep 1 && ~/.config/wallpaper
 
 # colors
 client.focused    #828282 #828282 #828282 #828282 #828282
@@ -60,6 +62,9 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# suspend
+bindsym $mod+F12 exec --no-startup-id systemctl suspend
+
 ## workspaces
 
 bindsym $mod+Tab workspace next
@@ -75,6 +80,17 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+workspace 4 output eDP-1
+workspace 5 output HDMI-1
+workspace 6 output HDMI-1
+workspace 7 output HDMI-1
+workspace 8 output HDMI-1
+workspace 9 output HDMI-1
+workspace 10 output HDMI-1
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -120,6 +136,13 @@ bindsym $mod+F10 scratchpad show
 ## bumblebee
 
 bar {
+  mode hide
+  hidden_state hide
+  modifier Mod1
+
+  output eDP-1
+  output HDMI-1
+
   position bottom
   height 19
 
@@ -145,10 +168,19 @@ bar {
        time.format="%H:%M"
 }
 
-assign [class="^firefox$"] 1
-assign [class="^Slack$"] 2
-assign [class="^discord$"] 3
+assign [class="^Slack$"] 1
+assign [class="^discord$"] 2
+assign [class="^firefox$"] 5
 
 for_window [class="flameshot"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="mpv"] move position center
 for_window [window_role="about"] floating enable
+for_window [window_role="GtkFileChooserDialog"] floating enable
+for_window [window_role="GtkFileChooserDialog"] move position center
+for_window [window_role="Dialog"] move position center
+
+bindsym $mod+v split vertical
+bindsym $mod+p split horizontal
+bindsym $mod+t split toggle
+bindsym $mod+u focus parent
