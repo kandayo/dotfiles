@@ -1,63 +1,6 @@
 [submodule ".i3/bumblebee-status"]
 	path = .i3/bumblebee-status
 	url = https://github.com/tobi-wan-kenobi/bumblebee-status.git
-[submodule ".vim/plugged/indentLine"]
-	path = .vim/plugged/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
-[submodule ".vim/plugged/vim-gitgutter"]
-	path = .vim/plugged/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule ".vim/plugged/ctrlp.vim"]
-	path = .vim/plugged/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule ".vim/plugged/direnv.vim"]
-	path = .vim/plugged/direnv.vim
-	url = https://github.com/direnv/direnv.vim.git
-[submodule ".vim/plugged/ranger.vim"]
-	path = .vim/plugged/ranger.vim
-	url = https://github.com/francoiscabrol/ranger.vim.git
-[submodule ".vim/plugged/lightline.vim"]
-	path = .vim/plugged/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
-[submodule ".vim/plugged/space-vim-dark"]
-	path = .vim/plugged/space-vim-dark
-	url = https://github.com/liuchengxu/space-vim-dark.git
-[submodule ".vim/plugged/i3config.vim"]
-	path = .vim/plugged/i3config.vim
-	url = https://github.com/mboughaba/i3config.vim.git
-[submodule ".vim/plugged/nerdcommenter"]
-	path = .vim/plugged/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule ".vim/plugged/vim-polyglot"]
-	path = .vim/plugged/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
-[submodule ".vim/plugged/vim-multiple-cursors"]
-	path = .vim/plugged/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule ".vim/plugged/vim-endwise"]
-	path = .vim/plugged/vim-endwise
-	url = https://github.com/tpope/vim-endwise.git
-[submodule ".vim/plugged/vim-fugitive"]
-	path = .vim/plugged/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/plugged/vim-rails"]
-	path = .vim/plugged/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/plugged/vim-surround"]
-	path = .vim/plugged/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/plugged/ale"]
-	path = .vim/plugged/ale
-	url = https://github.com/w0rp/ale.git
 [submodule ".nord-dircolors"]
 	path = .nord-dircolors
 	url = https://github.com/arcticicestudio/nord-dircolors.git
-[submodule ".vim/plugged/vim-rspec"]
-	path = .vim/plugged/vim-rspec
-	url = https://github.com/thoughtbot/vim-rspec.git
-[submodule ".vim/plugged/sql-heredoc.vim"]
-	path = .vim/plugged/sql-heredoc.vim
-	url = https://github.com/aliou/sql-heredoc.vim.git
-[submodule ".vim/plugged/vim-crystal"]
-	path = .vim/plugged/vim-crystal
-	url = https://github.com/rhysd/vim-crystal.git
