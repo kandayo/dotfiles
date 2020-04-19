@@ -1,13 +1,9 @@
---output "%(upload_date)s - %(title)s.%(ext)s"
-
---write-sub
+--add-metadata
 --all-subs
-
+--download-archive archived
 --embed-subs
 --embed-thumbnail
---add-metadata
---xattrs
-
 --ignore-errors
-
---merge-output-format mp4
+--output "%(upload_date)s - %(title)s.%(ext)s"
+--write-sub
+--xattrs
