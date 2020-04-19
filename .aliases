@@ -24,3 +24,5 @@ alias rspec='bundle exec rspec'
 alias sidekiq='bundle exec sidekiq'
 
 alias gs='git status'
+alias gc='git checkout'
+alias gco='git commit'
